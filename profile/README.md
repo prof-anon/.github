@@ -2,13 +2,13 @@ These instructions are for setting up PROF on a local devnet using our implement
 For reproducing analysis from the paper, go to : https://github.com/prof-anon/analysis
 
 ## Tools
-## Docker 
+### Docker 
 1. Install docker (https://docs.docker.com/get-started/get-docker/ or https://docs.docker.com/engine/install/)
 2. `sudo groupadd docker` 
 3. `sudo usermod -aG docker $USER`
 4. `newgrp docker`
 
-## Kurtosis
+### Kurtosis
 Install kurtosis (version 0.87.2):	
 1. `echo "deb [trusted=yes] https://apt.fury.io/kurtosis-tech/ /" | sudo tee /etc/apt/sources.list.d/kurtosis.list`
 2. `sudo apt update`
@@ -55,7 +55,7 @@ the dir structure should look like this:
 
 3. Check the logs
 	
-    `kurtosis service logs prof mev-relay-api`
+    `kurtosis service logs prof mev-relay-api` (pass `-f` flag to follow the log)
 
 4. kill the enclave 
 	
